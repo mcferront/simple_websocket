@@ -1,0 +1,7 @@
+Server/.vs
+Server/websockets/x64
+Server/websockets/x86
+Server/x64
+Server/x86
+
+*.user
