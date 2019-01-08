@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script>
+    var exampleSocket = new WebSocket("ws://127.0.0.1");
+
+    exampleSocket.onopen = function (event) {
+      exampleSocket.send("1. Here's some text that the server is urgently awaiting!"); 
+    };
+
+    exampleSocket.onmessage = function(e){
+       var server_message = e.data;
+       console.log(server_message);
+    }
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html> 
