@@ -96,9 +96,9 @@ static char *base64_encode(const unsigned char *pIn, size_t length)
     static char *result;
     static size_t result_length;
 
-    if ( nullptr == result || align(length,4) > result_length )
+    if ( nullptr == result || align(length * 2,4) > result_length )
     {
-        result_length = align(length, 4);
+        result_length = align(length * 2, 4);
         result = (char *) realloc( result, result_length );
     }
 
